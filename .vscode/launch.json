@@ -8,26 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Chrome",
-            "url": "http://localhost:1234",
-            "webRoot": "${workspaceFolder}/public"
-        },
-        {
-            "type": "edge",
-            "request": "launch",
-            "version": "dev",
-            "name": "Edge (Dev)",
-            "url": "http://localhost:1234",
-            "webRoot": "${workspaceFolder}/public"
-        },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "App",
-            "runtimeArgs": [
-                "--window-size=1280,720",
-                "--app=http://localhost:1234"
-            ],
-            "webRoot": "${workspaceFolder}/public"
+            "url": "http://localhost:1234/src",
         },
     ]
 }

@@ -141,14 +141,6 @@ export class Game implements ComponentData, GameState {
         this.GL = this.Canvas3.getContext("webgl2")!;
         this.Context = this.Canvas2.getContext("2d")!;
 
-        for (let name in this.GL) {
-            // @ts-ignore
-            if (typeof this.GL[name] == "function") {
-                // @ts-ignore
-                this.GL[name.match(/^..|[A-Z]|([1-9].*)/g).join("")] = this.GL[name];
-            }
-        }
-
         this.UI.addEventListener("contextmenu", evt => evt.preventDefault());
         this.UI.addEventListener("mousedown", evt => {
             this.Input[`d${evt.button}`] = 1;

@@ -43,7 +43,7 @@ each(
                         color_map[i] = i - 1;
                     }
 
-                    console.log({color_map});
+                    console.log({ color_map });
                 }
 
                 result.voxels.forEach((curr, idx) => {
@@ -58,12 +58,10 @@ each(
                             color_map[curr.colorIndex] =
                                 final_palette.push(palette[curr.colorIndex]) - 1;
                             console.log(
-                                `No color ${
-                                    palette[curr.colorIndex]
+                                `No color ${palette[curr.colorIndex]
                                 } found (voxel ${idx} in model ${path
                                     .basename(file, ".vox")
-                                    .toUpperCase()}). Next color index: ${
-                                    color_map[curr.colorIndex]
+                                    .toUpperCase()}). Next color index: ${color_map[curr.colorIndex]
                                 }`
                             );
                         }
@@ -137,8 +135,7 @@ each(
                 }
 
                 console.log(
-                    `Model ${file} saved. Cube count: ${
-                        model_data.cubes.length
+                    `Model ${file} saved. Cube count: ${model_data.cubes.length
                     }. Size: ${ints.length * 2}b`
                 );
 
@@ -154,7 +151,7 @@ each(
             });
     },
     () => {
-        console.log({color_map});
+        console.log({ color_map });
         console.log(`Map elements count: ${map_elements_indexes.size}`);
         console.log(`Colors count: ${final_palette.length}`);
         console.log("Saving palette");
@@ -169,7 +166,7 @@ each(
         console.log(`Saving models file: ${models_output.length * 2}b`);
         const final_result = new Uint16Array(models_output);
         const final_buffer = new Uint8Array(final_result.buffer);
-        fs.writeFileSync(path.join("./public", "models.tfu"), final_buffer);
+        fs.writeFileSync(path.join("./play", "models.tfu"), final_buffer);
     }
 );
 

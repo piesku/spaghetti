@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, user-scalable=0">
+<title>Spaghetti</title>
+<link rel="stylesheet" href="../play/game.css" />
+<link rel="stylesheet" href="../play/debug.css" />
+
+<body>
+    <canvas></canvas>
+    <canvas></canvas>
+    <main></main>
+
+    <div id="debug">
+        <div>cpu: <span id="cpu"></span></div>
+        <div>gpu: <span id="gpu"></span></div>
+        <div>fps: <span id="fps"></span></div>
+        <div><button onclick="toggle(this)">pause</button></div>
+    </div>
+
+    <script type="module">
+        import "./index.js";
+        window.toggle = function toggle(button) {
+            if (game.Running) {
+                game.Stop();
+                button.textContent = "resume";
+            } else {
+                game.Start();
+                button.textContent = "pause";
+            }
+        };
+    </script>
+</body>
