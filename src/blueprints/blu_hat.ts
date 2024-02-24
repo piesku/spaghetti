@@ -6,8 +6,18 @@ import {palette} from "../palette.js";
 import {Blueprint, Color, create_line} from "./blu_common.js";
 
 // colors 2 & 5
-let hat_colors: Array<Color> = [[0.2, 0.2, 0.2], [0.9, 0.9, 0.9], [0.53, 0, 0], [1, 0, 0]];
-let extra_colors: Array<Color> = [[0, 0, 0], [1, 1, 1], [1, 1, 0], [0.9, 0, 0]];
+let hat_colors: Array<Color> = [
+    [0.2, 0.2, 0.2],
+    [0.9, 0.9, 0.9],
+    [0.53, 0, 0],
+    [1, 0, 0],
+];
+let extra_colors: Array<Color> = [
+    [0, 0, 0],
+    [1, 1, 1],
+    [1, 1, 0],
+    [0.9, 0, 0],
+];
 
 export function get_hat_blueprint(game: Game): Blueprint {
     let hat_palette = palette.slice();

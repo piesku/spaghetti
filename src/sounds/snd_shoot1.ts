@@ -12,7 +12,10 @@ export let snd_shoot1 = <AudioClip>{
                 ,
                 ,
                 ,
-                [[false, 10, 0, 0, 5], ["sine", 7, 0, 2, 2, 8]],
+                [
+                    [false, 10, 0, 0, 5],
+                    ["sine", 7, 0, 2, 2, 8],
+                ],
             ],
             Notes: [57],
         },

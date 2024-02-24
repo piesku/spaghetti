@@ -74,12 +74,12 @@ export function from_axis(out: Quat, axis: Vec3, angle: number) {
     return out;
 }
 
-export const rotation_to = (function() {
+export const rotation_to = (function () {
     let tmpvec3: Vec3 = [];
     let xUnitVec3 = [1, 0, 0];
     let yUnitVec3 = [0, 1, 0];
 
-    return function(out: Quat, a: Vec3, b: Vec3) {
+    return function (out: Quat, a: Vec3, b: Vec3) {
         let d = dot(a, b);
         if (d < -0.999999) {
             cross(tmpvec3, xUnitVec3, a);

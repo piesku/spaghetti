@@ -121,7 +121,20 @@ export let snd_music = <AudioClip>{
             ],
         },
         {
-            Instrument: [3, , , , , , , , [[false, 2, 1, 1, 6], ["sine", 9, 2, 2, 7, 7]]],
+            Instrument: [
+                3,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                ,
+                [
+                    [false, 2, 1, 1, 6],
+                    ["sine", 9, 2, 2, 7, 7],
+                ],
+            ],
             Notes: [
                 38,
                 ,

@@ -55,7 +55,7 @@ export function* components_of_type<T>(
     component: Get
 ): IterableIterator<T> {
     if (game.World[transform.EntityId] & (1 << component)) {
-        yield (game[component][transform.EntityId] as unknown) as T;
+        yield game[component][transform.EntityId] as unknown as T;
     }
     for (let child of transform.Children) {
         yield* components_of_type<T>(game, child, component);

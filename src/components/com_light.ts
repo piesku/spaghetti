@@ -10,7 +10,7 @@ export type Light = [
     /** Blue */
     number,
     /** Intensity */
-    number
+    number,
 ];
 
 /**
